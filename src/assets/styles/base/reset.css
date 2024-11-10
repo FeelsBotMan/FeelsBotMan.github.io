@@ -198,6 +198,9 @@ body {
   }
   
   .deal-card p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
     padding: 0 15px 15px;
     color: #666;
   }

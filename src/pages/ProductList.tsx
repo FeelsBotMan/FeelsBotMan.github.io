@@ -1,14 +1,15 @@
 import { useSearchParams } from 'react-router-dom';
 import { useProducts } from '../hooks/useProducts';
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import LoadingSpinner from "../components/common/LoadingSpinner";
 
 const ProductList = () => {
   const [searchParams] = useSearchParams();
   const category = searchParams.get('category');
   const { products, loading, error } = useProducts(category || undefined);
 
-  if (loading) return <div className="text-center py-8">Loading...</div>;
+  if (loading) return <LoadingSpinner />;
   if (error) return <div className="text-center py-8 text-red-600">{error.message}</div>;
 
   return (

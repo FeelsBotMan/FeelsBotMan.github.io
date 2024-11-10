@@ -1,50 +1,92 @@
-# React + TypeScript + Vite
+# KeyboardStore 🎹
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+쇼핑몰 쇼케이스 프로젝트입니다. React, TypeScript, Vite를 기반으로 제작되었습니다.
 
-Currently, two official plugins are available:
+## 기술 스택
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend Framework:** React 18
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** CSS Modules
+- **Routing:** React Router v6
+- **Code Quality:** ESLint, TypeScript ESLint
 
-## Expanding the ESLint configuration
+## 주요 기능
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 🛍️ 카테고리별 상품 목록
+- 🔍 상품 검색 및 필터링
+- 🛒 장바구니 기능
+- 💳 결제 프로세스
+- 📱 반응형 디자인
 
-- Configure the top-level `parserOptions` property like this:
+## 프로젝트 구조
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+├── assets/
+│   └── styles/
+│       ├── base/
+│       │   ├── reset.css
+│       │   ├── typography.css
+│       │   └── variables.css
+│       ├── components/
+│       ├── layouts/
+│       └── pages/
+├── components/
+│   ├── Layout/
+│   └── common/
+├── pages/
+├── services/
+└── types/
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 시작하기
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 필수 조건
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- Node.js 18.0.0 이상
+- npm 9.0.0 이상
+
+### 설치
+
+```bash
+# 저장소 클론
+git clone https://github.com/FeelsBotMan/FeelsBotMan.github.io.git
+
+# 디렉토리 이동
+cd FeelsBotMan.github.io
+
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
 ```
+
+### 빌드
+
+```bash
+# 프로덕션 빌드
+npm run build
+
+# 빌드 미리보기
+npm run preview
+```
+
+## 개발 가이드
+
+### 코드 스타일
+
+- ESLint와 TypeScript ESLint 규칙을 따릅니다.
+- 컴포넌트는 함수형 컴포넌트로 작성합니다.
+- CSS 클래스명은 BEM 방식을 따릅니다.
+
+## 라이센스
+
+MIT License
+
+## 연락처
+
+프로젝트 관리자 - [@FeelsBotMan](https://github.com/FeelsBotMan)
+
+프로젝트 링크: [FeelsBotMan.github.io](https://feelsbotman.github.io/)

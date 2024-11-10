@@ -29,21 +29,21 @@ const deals = [
         title: '피로 없는 부드러운 키감 키보드',
         price: 129000,
         discount: 50,
-        imageUrl: '/api/placeholder/300/300'
+        imageUrl: '/images/categories/keyboard3.jpg'
     },
     {
         id: 2,
         title: '프로그래머 필수 키보드',
         price: 149000,
         discount: 40,
-        imageUrl: '/api/placeholder/300/300'
+        imageUrl: '/images/categories/keyboard2.jpg'
     },
     {
         id: 3,
         title: '장시간 타이핑에 최적화된 키보드',
         price: 179000,
         discount: 30,
-        imageUrl: '/api/placeholder/300/300'
+        imageUrl: '/images/categories/keyboard1.jpg'
     }
 ]
 
@@ -67,6 +67,7 @@ const SERVICES = [
 ];
 
 // Components
+/*
 const HeroSection: React.FC = () => (
   <section className="hero-section">
     <img src="/api/placeholder/1920/500" alt="메인 배너" className="hero-image" />
@@ -77,7 +78,7 @@ const HeroSection: React.FC = () => (
     </div>
   </section>
 );
-
+*/
 const CategorySection: React.FC = () => (
   <section className="category-section">
     <h2>인기 카테고리</h2>

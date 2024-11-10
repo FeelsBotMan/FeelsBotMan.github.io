@@ -39,6 +39,7 @@
   color: white;
   text-decoration: none;
   letter-spacing: -0.025em;
+  margin-left: 1rem;
 }
 
 /* Desktop Navigation */
@@ -95,6 +96,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .cart-link {
