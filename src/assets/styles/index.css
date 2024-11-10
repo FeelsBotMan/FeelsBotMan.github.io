@@ -1,0 +1,19 @@
+/* Base */
+@import './base/reset.css';
+@import './base/typography.css';
+@import './base/variables.css';
+
+/* Components */
+@import './components/button.css';
+@import './components/card.css';
+@import './components/navbar.css';
+@import './components/loading-spinners.css';
+
+/* Layouts */
+@import './layouts/grid.css';
+@import './layouts/header.css';
+@import './layouts/footer.css';
+
+/* Pages */
+@import './pages/home.css';
+

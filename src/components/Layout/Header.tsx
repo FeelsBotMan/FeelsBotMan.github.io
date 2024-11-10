@@ -1,18 +1,90 @@
 import { Link } from 'react-router-dom';
+import { ShoppingCart, Menu, X } from 'lucide-react';
+import { useState } from 'react';
+
+const CATEGORIES = [
+  {
+    id: 1,
+    name: '전체',
+    link: '/products'
+  },
+  {
+    id: 2,
+    name: '기계식',
+    link: '/products?category=mechanical'
+  },
+  {
+    id: 3,
+    name: '무선',
+    link: '/products?category=wireless'
+  },
+  {
+    id: 4,
+    name: '게이밍',
+    link: '/products?category=gaming'
+  }
+];
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    <header className="bg-white shadow-md">
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold">My Shop</Link>
-          <div className="flex items-center gap-4">
-            <Link to="/" className="hover:text-gray-600">홈</Link>
-            <Link to="/products" className="hover:text-gray-600">상품</Link>
-            <Link to="/cart" className="hover:text-gray-600">장바구니</Link>
+    <header className="header-container">
+      {/* Top Banner */}
+      <div className="header-banner">
+        <p>무료 배송 이벤트 진행중! 🎉</p>
+      </div>
+
+      {/* Main Header */}
+      <div className="header-main">
+        <div className="header-content">
+          <Link to="/" className="header-logo">
+            KeyboardStore
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="header-nav desktop-nav">
+            {CATEGORIES.map((category) => (
+              <Link 
+                key={category.id} 
+                to={category.link} 
+                className="nav-link"
+              >
+                {category.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Header Actions */}
+          <div className="header-actions">
+            <Link to="/cart" className="cart-link">
+              <ShoppingCart size={20} />
+              <span className="cart-badge">0</span>
+            </Link>
+            <button className="menu-button" onClick={toggleMenu}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
-      </nav>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <nav className="mobile-nav">
+          {CATEGORIES.map((category) => (
+            <Link 
+              key={category.id} 
+              to={category.link} 
+              className="mobile-nav-link" 
+              onClick={toggleMenu}
+            >
+              {category.name}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 };

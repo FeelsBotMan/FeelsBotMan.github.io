@@ -1,0 +1,16 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f2937; /* bg-gray-800 */
+    color: white;
+    padding: 1.5rem 0; /* py-6 */
+    text-align: center;
+    z-index: 10;
+  }
+  
+  /* footer 위의 컨텐츠가 footer에 가려지지 않도록 메인 컨텐츠에 bottom padding 추가 */
+  main {
+    padding-bottom: 5rem; /* footer 높이보다 약간 더 크게 설정 */
+  }
