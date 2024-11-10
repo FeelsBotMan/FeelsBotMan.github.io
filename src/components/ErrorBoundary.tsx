@@ -1,4 +1,5 @@
 import { useRouteError, isRouteErrorResponse } from 'react-router-dom';
+import '../assets/styles/pages/error.css';
 
 export default function ErrorBoundary() {
   const error = useRouteError();
@@ -19,20 +20,32 @@ export default function ErrorBoundary() {
     errorMessage = '알 수 없는 오류가 발생했습니다.';
   }
 
+
+const ErrorSection: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center p-8 bg-white rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold text-red-600 mb-4">
-          죄송합니다. 오류가 발생했습니다.
-        </h1>
-        <p className="text-gray-600 mb-4">{errorMessage}</p>
-        <button 
-          onClick={() => window.location.href = '/'}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-        >
-          홈으로 돌아가기
-        </button>
+    <section className="error-container">
+      <div className="error-content">
+        <div className="error-card">
+          <div className="error-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h1>죄송합니다. 오류가 발생했습니다.</h1>
+          <p>{errorMessage}</p>
+          <button onClick={() => window.location.href = '/'}>
+            홈으로 돌아가기
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
+  );
+};
+
+
+  return (
+    <ErrorSection />
   );
 }

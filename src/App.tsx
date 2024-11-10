@@ -45,6 +45,14 @@ const router = createBrowserRouter(
           </Suspense>
         } 
       />
+      <Route 
+        path="*" 
+        element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <ErrorBoundary />
+          </Suspense>
+        } 
+      />
     </Route>
   )
 );
