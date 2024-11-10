@@ -1,4 +1,4 @@
-# KeyboardStore 🎹
+# KeyboardStore ⌨️
 
 쇼핑몰 쇼케이스 프로젝트입니다. React, TypeScript, Vite를 기반으로 제작되었습니다.
 
@@ -44,7 +44,17 @@ npm run dev
 
 ## 라이센스
 
-MIT License
+Apache 2.0
+
+
+이미지 출처:
+  keyboard1: https://pixabay.com/photos/keyboard-computer-pc-escape-red-854530/
+  keyboard2: https://pixabay.com/photos/mechanical-keyboard-cherry-keycap-5365168/
+  keyboard3: https://pixabay.com/illustrations/mechanical-keyboard-keyboard-8701176/
+  keyboard4: https://pixabay.com/photos/keyboard-led-gaming-illuminated-3913007/
+
+폰트 출처:
+  Hakgyoansim: https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13372632&menuNo=200195
 
 ## 연락처
 
