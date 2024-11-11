@@ -1,8 +1,9 @@
 import { useSearchParams } from 'react-router-dom';
 import { useProducts } from '../hooks/useProducts';
-import { Card, CardContent } from "../components/ui/card";
-import { Button } from "../components/ui/button";
+import { Card } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+import { ShoppingCart, Heart } from 'lucide-react';
 
 const ProductList = () => {
   const [searchParams] = useSearchParams();
@@ -10,31 +11,68 @@ const ProductList = () => {
   const { products, loading, error } = useProducts(category || undefined);
 
   if (loading) return <LoadingSpinner />;
-  if (error) return <div className="text-center py-8 text-red-600">{error.message}</div>;
+  if (error) return <div className="error-message">{error.message}</div>;
+
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold mb-6">
-        {category ? `${category.charAt(0).toUpperCase() + category.slice(1)} Keyboards` : 'All Keyboards'}
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="product-list-container">
+      <div className="product-list-header">
+        <h1>
+          {category 
+            ? `${category.charAt(0).toUpperCase() + category.slice(1)} Keyboards` 
+            : 'All Keyboards'}
+        </h1>
+        <p className="product-count">{products.length} products</p>
+      </div>
+
+      <div className="product-grid">
         {products.map((product) => (
-          <Card key={product.id} className="overflow-hidden">
-            <img 
-              src={product.imageUrl} 
-              alt={product.name} 
-              className="w-full h-48 object-cover"
-            />
-            <CardContent className="p-4">
-              <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-              <p className="text-gray-600 mb-4">${product.price.toLocaleString()} - {product.description}</p>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                Buy Now
-              </Button>
-            </CardContent>
+          <Card key={product.id} className="product-card">
+            <div className="product-image-container">
+              <img 
+                src={product.imageUrl} 
+                alt={product.name} 
+                className="product-image"
+              />
+              <div className="product-actions">
+                <button className="action-button">
+                  <Heart className="icon" />
+                </button>
+                <button className="action-button">
+                  <ShoppingCart className="icon" />
+                </button>
+              </div>
+              {product.isNew && (
+                <Badge className="product-badge new">New</Badge>
+              )}
+              {product.discount > 0 && (
+                <Badge className="product-badge discount">-{product.discount}%</Badge>
+              )}
+            </div>
+            
+            <div className="product-info">
+              <h3 className="product-name">{product.name}</h3>
+              <div className="product-price">
+                {product.discount > 0 && (
+                  <span className="original-price">
+                    {product.price.toLocaleString()}원
+                  </span>
+                )}
+                <span className="current-price">
+                  {(product.price * (1 - product.discount / 100)).toLocaleString()}원
+                </span>
+              </div>
+              <p className="product-description">{product.description}</p>
+            </div>
           </Card>
         ))}
       </div>
+      {products.length === 0 && (
+          <div className="empty-state">
+            <h2>현재 모든 상품이 품절되었습니다</h2>
+            <p>빠른 시일 내에 재입고될 예정입니다.</p>
+          </div>
+        )}
     </div>
   );
 };

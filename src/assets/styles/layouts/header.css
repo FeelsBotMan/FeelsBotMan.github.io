@@ -112,9 +112,9 @@
 
 .cart-badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: var(--color-primary);
+  top: -12px;
+  right: -12px;
+  background-color: rosybrown;
   color: white;
   font-size: 0.75rem;
   padding: 0.125rem 0.375rem;

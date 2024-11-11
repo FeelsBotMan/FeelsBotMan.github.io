@@ -1,5 +1,6 @@
 import { useRouteError, isRouteErrorResponse } from 'react-router-dom';
 import '../assets/styles/pages/error.css';
+import ErrorPage from './common/ErrorPage';
 
 export default function ErrorBoundary() {
   const error = useRouteError();
@@ -21,31 +22,10 @@ export default function ErrorBoundary() {
   }
 
 
-const ErrorSection: React.FC = () => {
   return (
-    <section className="error-container">
-      <div className="error-content">
-        <div className="error-card">
-          <div className="error-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-          </div>
-          <h1>죄송합니다. 오류가 발생했습니다.</h1>
-          <p>{errorMessage}</p>
-          <button onClick={() => window.location.href = '/'}>
-            홈으로 돌아가기
-          </button>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-
-  return (
-    <ErrorSection />
+    <ErrorPage
+      title="죄송합니다. 오류가 발생했습니다."
+      message={errorMessage}
+    />
   );
 }

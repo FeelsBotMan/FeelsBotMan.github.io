@@ -13,7 +13,7 @@
 
 ## 주요 기능
 
-- 🛍️ 카테고리별 상품 목록
+- 🛍️ 카테고리별 상품 목록 (🚧공사중)
 - 🔍 상품 검색 및 필터링 (🚧공사중)
 - 🛒 장바구니 기능 (🚧공사중)
 - 💳 결제 프로세스 (🚧공사중)
@@ -47,14 +47,14 @@ npm run dev
 Apache 2.0
 
 
-이미지 출처:
-  keyboard1: https://pixabay.com/photos/keyboard-computer-pc-escape-red-854530/
-  keyboard2: https://pixabay.com/photos/mechanical-keyboard-cherry-keycap-5365168/
-  keyboard3: https://pixabay.com/illustrations/mechanical-keyboard-keyboard-8701176/
-  keyboard4: https://pixabay.com/photos/keyboard-led-gaming-illuminated-3913007/
+- 이미지 출처:
+  - keyboard1: https://pixabay.com/photos/keyboard-computer-pc-escape-red-854530/
+  - keyboard2: https://pixabay.com/photos/mechanical-keyboard-cherry-keycap-5365168/
+  - keyboard3: https://pixabay.com/illustrations/mechanical-keyboard-keyboard-8701176/
+  - keyboard4: https://pixabay.com/photos/keyboard-led-gaming-illuminated-3913007/
 
-폰트 출처:
-  Hakgyoansim: https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13372632&menuNo=200195
+- 폰트 출처:
+  - Hakgyoansim: https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13372632&menuNo=200195
 
 ## 연락처
 

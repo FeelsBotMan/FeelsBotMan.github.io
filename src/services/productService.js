@@ -38,22 +38,26 @@ var MOCK_PRODUCTS = {
     mechanical: [
         {
             id: 1,
-            name: "Professional Mechanical Keyboard",
-            price: 89.99,
+            name: "장시간 타이핑에 최적화된 키보드",
+            price: 179000,
+            discount: 0,
             description: "High performance for typing and gaming",
-            imageUrl: "/images/keyboard1.jpg",
-            category: "mechanical"
+            imageUrl: "/images/categories/keyboard1.jpg",
+            category: "mechanical",
+            isNew: true
         },
         // 더 많은 기계식 키보드...
     ],
     wireless: [
         {
             id: 2,
-            name: "Premium Wireless Keyboard",
-            price: 69.99,
+            name: "프로그래머 필수 키보드",
+            price: 149000,
+            discount: 0,
             description: "Convenient and portable",
-            imageUrl: "/images/keyboard2.jpg",
-            category: "wireless"
+            imageUrl: "/images/categories/keyboard2.jpg",
+            category: "wireless",
+            isNew: true
         },
         // 더 많은 무선 키보드...
     ],

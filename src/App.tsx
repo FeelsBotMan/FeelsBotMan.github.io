@@ -13,6 +13,7 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 const Home = lazy(() => import('./pages/Home'));
 const ProductList = lazy(() => import('./pages/ProductList'));
 const Cart = lazy(() => import('./pages/Cart'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -49,7 +50,7 @@ const router = createBrowserRouter(
         path="*" 
         element={
           <Suspense fallback={<LoadingSpinner />}>
-            <ErrorBoundary />
+            <NotFound />
           </Suspense>
         } 
       />

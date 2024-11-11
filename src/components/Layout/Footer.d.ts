@@ -1,2 +1,2 @@
-declare const Footer: () => import("react/jsx-runtime").JSX.Element;
+declare const Footer: import("react").ForwardRefExoticComponent<import("react").RefAttributes<HTMLElement>>;
 export default Footer;

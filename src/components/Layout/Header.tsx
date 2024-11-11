@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 
 const CATEGORIES = [
   {
@@ -25,13 +25,13 @@ const CATEGORIES = [
   }
 ];
 
-const Header = () => {
+const Header = forwardRef<HTMLElement>((props, ref) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="header-container">
+    <header className="header-container" ref={ref}>
       {/* Top Banner */}
       <div className="header-banner">
         <p>무료 배송 이벤트 진행중! 🎉</p>
@@ -87,6 +87,6 @@ const Header = () => {
       )}
     </header>
   );
-};
+});
 
 export default Header; 

@@ -1,2 +1,2 @@
-declare const Header: () => import("react/jsx-runtime").JSX.Element;
+declare const Header: import("react").ForwardRefExoticComponent<import("react").RefAttributes<HTMLElement>>;
 export default Header;

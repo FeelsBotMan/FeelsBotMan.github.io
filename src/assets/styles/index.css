@@ -16,4 +16,5 @@
 
 /* Pages */
 @import './pages/home.css';
-
+@import './pages/cart.css';
+@import './pages/product-list.css';
