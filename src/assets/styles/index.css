@@ -18,3 +18,7 @@
 @import './pages/home.css';
 @import './pages/cart.css';
 @import './pages/product-list.css';
+@import './pages/login.css';
+@import './pages/error.css';
+@import './pages/forgot-password.css';
+@import './pages/signup.css';

@@ -1,6 +1,6 @@
-# KeyboardStore ⌨️
+# KeyboardStore 🎹
 
-쇼핑몰 쇼케이스 프로젝트입니다. React, TypeScript, Vite를 기반으로 제작되었습니다.
+키보드 전문 쇼핑몰 프로젝트입니다. React, TypeScript, Vite를 기반으로 제작되었습니다.
 
 ## 기술 스택
 
@@ -13,11 +13,32 @@
 
 ## 주요 기능
 
-- 🛍️ 카테고리별 상품 목록 (🚧공사중)
-- 🔍 상품 검색 및 필터링 (🚧공사중)
-- 🛒 장바구니 기능 (🚧공사중)
-- 💳 결제 프로세스 (🚧공사중)
+- 🛍️ 카테고리별 상품 목록
+- 🔍 상품 검색 및 필터링
+- 🛒 장바구니 기능
+- 💳 결제 프로세스
 - 📱 반응형 디자인
+
+## 프로젝트 구조
+
+```
+src/
+├── assets/
+│   └── styles/
+│       ├── base/
+│       │   ├── reset.css
+│       │   ├── typography.css
+│       │   └── variables.css
+│       ├── components/
+│       ├── layouts/
+│       └── pages/
+├── components/
+│   ├── Layout/
+│   └── common/
+├── pages/
+├── services/
+└── types/
+```
 
 ## 시작하기
 
@@ -30,10 +51,10 @@
 
 ```bash
 # 저장소 클론
-git clone https://github.com/FeelsBotMan/FeelsBotMan.github.io.git
+git clone https://github.com/yourusername/keyboard-store.git
 
 # 디렉토리 이동
-cd FeelsBotMan.github.io
+cd keyboard-store
 
 # 의존성 설치
 npm install
@@ -42,22 +63,45 @@ npm install
 npm run dev
 ```
 
+### 빌드
+
+```bash
+# 프로덕션 빌드
+npm run build
+
+# 빌드 미리보기
+npm run preview
+```
+
+## 개발 가이드
+
+### 코드 스타일
+
+- ESLint와 TypeScript ESLint 규칙을 따릅니다.
+- 컴포넌트는 함수형 컴포넌트로 작성합니다.
+- CSS 클래스명은 BEM 방식을 따릅니다.
+
+### 브랜치 전략
+
+- `main`: 프로덕션 브랜치
+- `develop`: 개발 브랜치
+- `feature/*`: 기능 개발 브랜치
+- `hotfix/*`: 긴급 수정 브랜치
+
 ## 라이센스
 
-Apache 2.0
+MIT License
 
+## 기여하기
 
-- 이미지 출처:
-  - keyboard1: https://pixabay.com/photos/keyboard-computer-pc-escape-red-854530/
-  - keyboard2: https://pixabay.com/photos/mechanical-keyboard-cherry-keycap-5365168/
-  - keyboard3: https://pixabay.com/illustrations/mechanical-keyboard-keyboard-8701176/
-  - keyboard4: https://pixabay.com/photos/keyboard-led-gaming-illuminated-3913007/
-
-- 폰트 출처:
-  - Hakgyoansim: https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13372632&menuNo=200195
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 연락처
 
-프로젝트 관리자 - [@FeelsBotMan](https://github.com/FeelsBotMan)
+프로젝트 관리자 - [@yourusername](https://github.com/yourusername)
 
-프로젝트 링크: [FeelsBotMan.github.io](https://feelsbotman.github.io/)
+프로젝트 링크: [https://github.com/yourusername/keyboard-store](https://github.com/yourusername/keyboard-store)

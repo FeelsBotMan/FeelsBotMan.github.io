@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Menu, X } from 'lucide-react';
-import { useState, forwardRef } from 'react';
+import { ShoppingCart, Menu, X, LogIn } from 'lucide-react';
+import { useState } from 'react';
 
 const CATEGORIES = [
   {
@@ -25,13 +25,12 @@ const CATEGORIES = [
   }
 ];
 
-const Header = forwardRef<HTMLElement>((props, ref) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="header-container" ref={ref}>
+    <header className="header-container">
       {/* Top Banner */}
       <div className="header-banner">
         <p>무료 배송 이벤트 진행중! 🎉</p>
@@ -59,6 +58,9 @@ const Header = forwardRef<HTMLElement>((props, ref) => {
 
           {/* Header Actions */}
           <div className="header-actions">
+            <Link to="/login" className="login-nav-link">
+              <LogIn size={20} />
+            </Link>
             <Link to="/cart" className="cart-link">
               <ShoppingCart size={20} />
               <span className="cart-badge">0</span>
@@ -83,10 +85,17 @@ const Header = forwardRef<HTMLElement>((props, ref) => {
               {category.name}
             </Link>
           ))}
+          <Link 
+            to="/login" 
+            className="mobile-nav-link" 
+            onClick={toggleMenu}
+          >
+            로그인
+          </Link>
         </nav>
       )}
     </header>
   );
-});
+};
 
 export default Header; 

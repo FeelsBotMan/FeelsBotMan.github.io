@@ -55,4 +55,13 @@ img {
 }
 
 
+/* 대표 색상 */
+:root {
+  --primary-color: #2D3436;     /* 진한 차콜 그레이 */
+  --secondary-color: #636E72;   /* 중간 톤 그레이 */
+  --tertiary-color: #B2BEC3;    /* 밝은 그레이 */
+  --accent-color: #00B894;      /* 민트 포인트 */
+  --background-color: #FFFFFF;   /* 화이트 */
+}
+
 
