@@ -1,9 +1,9 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useSearchParams } from 'react-router-dom';
-import { useProducts } from '../hooks/useProducts';
-import { Card } from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
-import LoadingSpinner from "../components/common/LoadingSpinner";
+import { useProducts } from '../../hooks/useProducts';
+import { Card } from "../../components/ui/card";
+import { Badge } from "../../components/ui/badge";
+import LoadingSpinner from '../../components/common/LoadingSpinner';
 import { ShoppingCart, Heart } from 'lucide-react';
 var ProductList = function () {
     var searchParams = useSearchParams()[0];

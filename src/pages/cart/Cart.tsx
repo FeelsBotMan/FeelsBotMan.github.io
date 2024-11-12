@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CartItem } from '../types';
+import { CartItem } from '../../types';
 import { Minus, Plus, Trash2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
